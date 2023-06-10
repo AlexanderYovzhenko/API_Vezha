@@ -1,7 +1,0 @@
-[[railway.builds]]
-name = "app"
-dockerfilePath = "Dockerfile"
-
-[[railway.builds]]
-name = "db"
-dockerfilePath = "Dockerfile.db"
