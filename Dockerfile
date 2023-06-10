@@ -9,7 +9,7 @@ COPY tsconfig.build.json ./
 RUN npm ci --only=production
 
 COPY dist ./dist
-COPY uploads ./uploads
+# COPY uploads ./uploads
 COPY logs ./logs
 
 CMD ["node", "dist/main.js"]
