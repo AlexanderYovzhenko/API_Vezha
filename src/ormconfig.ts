@@ -3,7 +3,7 @@ import path from 'path';
 import { ConnectionOptions } from 'typeorm';
 
 dotenv.config({
-  path: path.join(__dirname, '.env'),
+  path: path.join(__dirname, '../.env'),
 });
 
 export default {

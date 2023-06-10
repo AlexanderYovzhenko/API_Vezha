@@ -1,18 +1,15 @@
-FROM node:lts-alpine3.15
+FROM node:lts-alpine
 
-EXPOSE ${PORT}
+WORKDIR /home/app
 
-WORKDIR /home/app/
+COPY package*.json ./
+COPY tsconfig.json ./
+COPY tsconfig.build.json ./
 
-RUN mkdir -p ./dist
-RUN mkdir -p ./uploads
-RUN mkdir -p ./logs
+RUN npm ci --only=production
 
-COPY migrations ./migrations
-COPY typings ./typings
-COPY src ./src
+COPY dist ./dist
+COPY uploads ./uploads
+COPY logs ./logs
 
-COPY package*.json tsconfig.json tsconfig.build.json ./
-
-RUN npm ci
-
+CMD ["node", "dist/main.js"]
