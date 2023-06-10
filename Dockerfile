@@ -12,4 +12,4 @@ COPY dist ./dist
 # COPY uploads ./uploads
 COPY logs ./logs
 
-CMD ["node", "npm run typeorm:migration && npm run start:dev"]
+CMD ["npm", "npm run typeorm:migration && npm run start:dev"]
