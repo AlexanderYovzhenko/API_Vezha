@@ -2,13 +2,13 @@ FROM node:lts-alpine
 
 WORKDIR /home/app
 
-# RUN mkdir -p ./dist
-# RUN mkdir -p ./uploads
-# RUN mkdir -p ./logs
+RUN mkdir -p ./dist
+RUN mkdir -p ./uploads
+RUN mkdir -p ./logs
 
-COPY dist ./dist
-COPY uploads ./uploads
-COPY logs ./logs
+# COPY dist ./dist
+# COPY uploads ./uploads
+# COPY logs ./logs
 
 COPY package*.json ./
 COPY tsconfig.json ./
