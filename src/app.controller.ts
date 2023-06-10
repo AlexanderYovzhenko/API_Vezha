@@ -5,9 +5,9 @@ import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 @Controller()
 export class AppController {
   @ApiOperation({ summary: 'Hello user' })
-  @ApiResponse({ status: 200, description: 'Hello RS School User!' })
+  @ApiResponse({ status: 200, description: 'Hello User!' })
   @Get()
   getHello(): string {
-    return 'REST Kanban service!';
+    return 'API Vezha service is running!';
   }
 }
