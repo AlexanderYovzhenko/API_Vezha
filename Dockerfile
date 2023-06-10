@@ -22,4 +22,4 @@ COPY package*.json tsconfig.json tsconfig.build.json ./
 
 RUN npm ci
 
-CMD ["node", "dist/main.js"]
+CMD ["npm", "run typeorm:migration && npm run start:dev"]
