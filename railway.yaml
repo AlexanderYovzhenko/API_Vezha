@@ -1,8 +1,0 @@
-version: 2
-builds:
-  - name: app
-    context: .
-    dockerfile: Dockerfile
-  - name: db
-    context: .
-    dockerfile: Dockerfile.db

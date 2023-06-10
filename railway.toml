@@ -1,0 +1,12 @@
+[railway]
+version = 2
+
+[[railway.builds]]
+name = "app"
+context = "."
+dockerfile = "Dockerfile"
+
+[[railway.builds]]
+name = "db"
+context = "."
+dockerfile = "Dockerfile.db"
