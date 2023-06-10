@@ -10,8 +10,13 @@ dotenv_1.default.config({
 });
 exports.default = {
     type: 'postgres',
-    cache: false,
+    host: process.env.PGHOST,
+    port: process.env.PGPORT,
+    username: process.env.PGUSER,
+    password: process.env.PGPASSWORD,
+    database: process.env.PGDATABASE,
     url: process.env.DATABASE_URL,
+    cache: false,
     synchronize: false,
     logging: false,
     ssl: {
