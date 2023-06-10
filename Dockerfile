@@ -1,4 +1,4 @@
-FROM node:lts-alpine3.15
+FROM node:lts-alpine
 
 WORKDIR /home/app
 
@@ -21,5 +21,3 @@ COPY src ./src
 COPY package*.json tsconfig.json tsconfig.build.json ./
 
 RUN npm ci
-
-CMD ["npm", "run typeorm:migration && npm run start:dev"]
