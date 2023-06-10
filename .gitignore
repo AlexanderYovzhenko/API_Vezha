@@ -89,7 +89,7 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+# dist
 
 # Gatsby files
 .cache/
@@ -131,7 +131,7 @@ dist
 
 # Custom settings
 .DS_Store
-dist
+# dist
 node_modules
 *.code-workspace
 .DS_Store
